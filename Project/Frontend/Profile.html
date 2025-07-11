@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      body {
+        background: #121317;
+        color: white;
+        line-height: 1.6;
+      }
+
+      .header {
+        background-color: #030218;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10%;
+      }
+
+      .logo {
+        cursor: pointer;
+        font-size: 48px;
+        text-decoration: none;
+        color: #063117;
+        font-weight: 900;
+      }
+
+      .logo i {
+        padding-right: 10px;
+      }
+
+      .header span {
+        color: #7f8c8d;
+      }
+
+      .contact {
+        font-size: 28px;
+        color: #7f8c8d;
+        text-decoration: none;
+        padding: 20px;
+        font-weight: 900;
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #030218;
+        min-width: 160px;
+        z-index: 100;
+        right: 0;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: #7f8c8d;
+        font-weight: 900;
+        font-size: 18px;
+        margin: 5px 0;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .contact:hover {
+        color: white;
+        transition: 0.3s;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        color: white;
+        transition: 0.3s;
+      }
+
+      main {
+        min-height: 88vh;
+      }
+
+      .intro {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 10% 2%;
+      }
+
+      .intro h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 0;
+        font-size: 48px;
+      }
+
+      .intro h1 span {
+        color: #fffb00;
+        font-weight: 900;
+      }
+
+      .intro p {
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 10px 0;
+        font-size: 18px;
+      }
+
+      .intro p strong {
+        color: rgb(177, 4, 4);
+        font-weight: 900;
+        padding: 0 10px;
+      }
+
+      .features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 15%;
+        gap: 10%;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        text-align: center;
+        background-color: transparent;
+        margin: 10px 30px 5px;
+        padding: 35px 50px;
+        border: solid 1px #d1d0db;
+        border-radius: 30px;
+        cursor: pointer;
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .button a {
+        text-decoration: none;
+        color: #7f8c8d;
+        font-weight: 900;
+        font-size: 18px;
+      }
+
+      .button:hover {
+        background-color: #030218;
+        border: none;
+        transition: 0.5s;
+      }
+
+      .button:hover a {
+        color: rgb(177, 4, 4);
+        transition: 0.3s;
+      }
+
+        
+      .footer {
+        text-align: center;
+        padding: 5px 20px;
+      }
+
+      /* Responsive Design */
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          padding: 10px 5%;
+        }
+
+        .logo {
+          font-size: 36px;
+        }
+
+        .contact {
+          font-size: 20px;
+          padding: 10px 0;
+        }
+
+        .intro h1 {
+          font-size: 36px;
+        }
+
+        .intro p {
+          font-size: 16px;
+        }
+
+        .features {
+          padding: 5% 10%;
+        }
+
+        .button {
+          padding: 25px 40px;
+          margin: 10px 15px;
+        }
+
+        .button a {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 28px;
+        }
+
+        .contact {
+          font-size: 18px;
+        }
+
+        .intro h1 {
+          font-size: 28px;
+        }
+
+        .intro p {
+          font-size: 14px;
+        }
+
+        .features {
+          padding: 5% 5%;
+        }
+
+        .button {
+          padding: 20px 30px;
+          margin: 10px 10px;
+        }
+
+        .button a {
+          font-size: 14px;
+        }
+      }
+    </style>
+    <title>User Profile</title>
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="logo"><i class="bx bxl-spotify"></i>ViBE<span>wIZ</span></h2>
+      <div class="dropdown">
+        <a href="#" class="contact">Contact Me</a>
+        <div class="dropdown-content">
+          <a href="https://www.facebook.com/profile.php?id=100036195365663"
+            ><span>facebook</span><i class="bx bxl-facebook-square"></i
+          ></a>
+          <a href="https://github.com/AbdulHadi117"
+            ><span>github</span><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/abdulhadi117/"
+            ><span>linkedin</span><i class="bx bxl-linkedin-square"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="intro">
+        {% if profile['images'] %}
+        <img
+          src="{{ profile['images'][0]['url'] }}"
+          alt="Profile Picture"
+          width="150"
+        />
+        {% endif %}
+        <h1>Welcome, <span>{{ profile['display_name'] }}!</span></h1>
+
+        <p><strong>Username:</strong> {{ profile['id'] }}</p>
+        <p>
+          <strong>Email:</strong> {{ profile.get('email', 'No Email available')
+          }}
+        </p>
+        <p>
+          <strong>Country:</strong> {{ profile.get('country', 'No Country
+          available') }}
+        </p>
+        <p>
+          <strong>Followers:</strong> {{ profile['followers'].get('total','No
+          followers data') }}
+        </p>
+        <p>
+          <strong>Playlists:</strong> {{ num_playlists }}
+        </p>
+        <p>
+          <strong>Top Tracks:</strong>
+          {% for track in top_tracks['items'] %}
+          {{ track['name'] + "," }}
+          {% endfor %}
+        </p>
+        <p>
+          <strong>Top Genres:</strong>
+          {% for genre in top_genres %}
+          {{ genre + "," }}
+          {% endfor %}
+        </p>
+        <p>
+          <strong>Top Artists:</strong>
+          {% for artist in top_artists['items'] %}
+          {{ artist['name'] + "," }}
+          {% endfor %}
+        </p>
+      </div>
+    </div>    
+      <nav class="features">
+        <div class="button">
+          <a href="{{ url_for('recommendations') }}">Get Recommendation</a>
+        </div>
+        <div class="button">
+          <a href="{{ url_for('logout') }}">Logout of Your Profile</a>
+        </div>
+      </nav>
+    </main>
+    <footer>
+      <p class="footer">&COPY; ViBEwIZ Music Recommendation System.</p>
+    </footer>
+  </body>
+</html>
