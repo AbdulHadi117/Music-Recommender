@@ -1,6 +1,6 @@
 # Spotify Music Recommender
 
-A Flask web application that integrates with the Spotify API to provide music recommendations and playlist creation functionality.
+A web application that integrates with the Spotify API to provide music recommendations and playlist creation functionality.
 
 ## Features
 
