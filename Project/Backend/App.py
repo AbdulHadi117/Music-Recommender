@@ -3,11 +3,11 @@ from flask import Flask, redirect, request, session, url_for, render_template, j
 import spotipy
 import os
 from spotipy.oauth2 import SpotifyOAuth
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import logging
 
 # Load environment variables from a .env file
-load_dotenv()
+load_dotenv(find_dotenv())
 
 app = Flask(__name__)
 
