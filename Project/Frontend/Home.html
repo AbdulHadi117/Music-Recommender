@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      body {
+        background: #121317;
+        color: white;
+        line-height: 1.6;
+      }
+
+      .header {
+        background-color: #030218;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+      }
+
+      .logo {
+        cursor: pointer;
+        font-size: 36px;
+        text-decoration: none;
+        color: #063117;
+        font-weight: 900;
+      }
+
+      .logo i {
+        padding-right: 10px;
+      }
+
+      .header span {
+        color: #7f8c8d;
+      }
+
+      .contact {
+        font-size: 20px;
+        color: #7f8c8d;
+        text-decoration: none;
+        padding: 20px;
+        font-weight: 900;
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #030218;
+        min-width: 160px;
+        z-index: 100;
+        right: 0;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: #7f8c8d;
+        font-weight: 900;
+        font-size: 18px;
+        margin: 5px 0;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .contact:hover {
+        color: white;
+        transition: 0.3s;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        color: white;
+        transition: 0.3s;
+      }
+
+      main {
+        min-height: 80vh;
+        padding: 20px 10%;
+      }
+
+      .intro {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+        text-align: center;
+      }
+
+      .intro h2 {
+        font-size: 32px;
+        font-weight: 900;
+        color: #7f8c8d;
+        padding: 25px 0 10px;
+      }
+
+      .intro h3 {
+        color: rgb(177, 4, 4);
+      }
+
+      .features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7.5% 0 20px;
+      }
+
+      .button {
+        background-color: transparent;
+        margin: 0px 15px 5px;
+        padding: 20px 50px;
+        border: solid 1px #d1d0db;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .button a {
+        text-decoration: none;
+        color: #7f8c8d;
+        font-weight: 900;
+        font-size: 20px;
+      }
+
+      .button:hover {
+        background-color: #030218;
+        border: none;
+        transition: 0.5s;
+      }
+
+      .button:hover a {
+        color: rgb(177, 4, 4);
+        transition: 0.3s;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 10px 20px;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          padding: 10px 5%;
+        }
+
+        .logo {
+          font-size: 28px;
+        }
+
+        .contact {
+          font-size: 18px;
+          padding: 10px 0;
+        }
+
+        .intro h2 {
+          font-size: 28px;
+        }
+
+        .button {
+          padding: 15px 30px;
+        }
+
+        .button a {
+          font-size: 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 24px;
+        }
+
+        .contact {
+          font-size: 16px;
+        }
+
+        .intro h2 {
+          font-size: 24px;
+        }
+
+        .button {
+          padding: 10px 20px;
+        }
+
+        .button a {
+          font-size: 16px;
+        }
+      }
+    </style>
+
+    <title>Music Recommendation System</title>
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="logo"><i class="bx bxl-spotify"></i>ViBE<span>wIZ</span></h2>
+      <div class="dropdown">
+        <a href="#" class="contact">Contact Me</a>
+        <div class="dropdown-content">
+          <a href="https://www.facebook.com/profile.php?id=100036195365663"
+            ><span>facebook</span><i class="bx bxl-facebook-square"></i
+          ></a>
+          <a href="https://github.com/AbdulHadi117"
+            ><span>github</span><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/abdulhadi117/"
+            ><span>linkedin</span><i class="bx bxl-linkedin-square"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="intro">
+        <h2>Discover new music tailored just for you!</h2>
+        <h3>Before you begin, you must Log In to your Profile</h3>
+      </div>
+      <nav class="features">
+        <div class="button">
+          <a href="{{ url_for('login') }}">Connect With Spotify</a>
+        </div>
+      </nav>
+    </main>
+
+    <footer>
+      <p class="footer">&COPY; ViBEwIZ Music Recommendation System.</p>
+    </footer>
+  </body>
+</html>
